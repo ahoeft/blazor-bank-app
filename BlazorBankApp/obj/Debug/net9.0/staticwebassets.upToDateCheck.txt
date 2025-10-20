@@ -1,0 +1,7 @@
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\favicon.png
+C:\Code\BlazorBankApp\BlazorBankApp\wwwroot\app.css
+C:\Code\BlazorBankApp\BlazorBankApp\wwwroot\bootstrap\bootstrap.min.css
+C:\Code\BlazorBankApp\BlazorBankApp\wwwroot\bootstrap\bootstrap.min.css.map
