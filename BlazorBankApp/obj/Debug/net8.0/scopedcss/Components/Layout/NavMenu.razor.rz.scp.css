@@ -60,6 +60,7 @@
     }
 
     .nav-item[b-w099x2gpy9]  .nav-link {
+        font-size:20px;
         color: #d7d7d7;
         background: none;
         border: none;
@@ -69,6 +70,7 @@
         align-items: center;
         line-height: 3rem;
         width: 100%;
+        display: table-cell;
     }
 
 .nav-item[b-w099x2gpy9]  a.active {

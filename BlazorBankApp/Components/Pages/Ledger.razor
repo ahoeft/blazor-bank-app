@@ -1,5 +1,56 @@
-﻿<h3>Ledger</h3>
+﻿@page "/ledger"
+@rendermode InteractiveServer
+
+<h3>Ledger</h3>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Amount</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var entry in entries)
+        {
+            <tr>
+                <td>@entry.Amount</td>
+                <td>@entry.Category</td>
+                <td>@entry.Description</td>
+                <td>@entry.DateOfEntry</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 @code {
+    public List<Entry> entries = new List<Entry>
+    {
+        new Entry(20, "Deposit", "Check from Grandma", new DateTime(2025, 9, 16)),    
+        new Entry(-11.32, "Entertainment", "Starbucks", new DateTime(2025, 9, 17)),    
+        new Entry(-125.75, "Bill", "Internet", new DateTime(2025, 10, 1))    
+    };
 
+
+    public class Entry
+    {
+        public Entry()
+        {
+        }
+
+        public Entry(Double amount, string category, string description, DateTime dateOfEntry)
+        {
+            this.Amount = amount;
+            this.Category = category;
+            this.Description = description;
+            this.DateOfEntry = dateOfEntry;
+        }
+
+        public Double Amount { get; set; } = 0.00;
+        public string Category { get; set; } = "";
+        public string Description { get; set; } = "";
+        public DateTime DateOfEntry { get; set; } = DateTime.MinValue;
+    }
 }
